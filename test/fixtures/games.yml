@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  score_phase: MyString
+  title: MyString
+  platform: MyString
+  genre: MyString
+  release_year: MyString
+  release_month: MyString
+  release_day: MyString
+
+two:
+  score_phase: MyString
+  title: MyString
+  platform: MyString
+  genre: MyString
+  release_year: MyString
+  release_month: MyString
+  release_day: MyString
