@@ -7,7 +7,29 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body> 
+<header class="navbar navbar-fixed-top navbar-inverse">
+  
+      <div class="container">
+        <%= link_to "Beast Games", '#', id: "logo" %>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Home",   '#' %></li>
+            <li><%= link_to "Games",   '#' %></li>
+            <li><%= link_to "Scores", '#' %></li>
+            <li><%= link_to "Twitter", '#' %></li>
+            <li><%= link_to "Log in", '#' %></li>
+          </ul>
+      <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+
 
 <%= yield %>
 
