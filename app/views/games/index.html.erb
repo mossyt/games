@@ -1,0 +1,14 @@
+<% provide(:title, "Games") %>
+<h1> Games</h1>
+
+
+<% @games.each do |game| %>
+<p> <b>Address:</b> 
+<%= "#{@games.address.street}" %>,
+<%= "#{@gaaddress.city}" %>
+<%= "#{@customer.address.postcode}" %>
+</p> 
+
+
+<% end %>
+
