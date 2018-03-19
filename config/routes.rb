@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   get 'static_pages/contact'
   resources :tweets do
   end
-  resources :games do
+ resources :games, only: [:show, :index]
 end
-end
+
