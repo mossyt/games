@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180319104505) do
+ActiveRecord::Schema.define(version: 20180319171149) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -42,6 +42,32 @@ ActiveRecord::Schema.define(version: 20180319104505) do
     t.integer  "release_day"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+  end
+
+  create_table "order_items", force: :cascade do |t|
+    t.integer  "product_id"
+    t.integer  "order_id"
+    t.float    "unit_price"
+    t.integer  "quantity"
+    t.float    "total_price"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.float    "subtotal"
+    t.float    "total"
+    t.float    "tax"
+    t.float    "shipping"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string   "name"
+    t.float    "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "scores", force: :cascade do |t|

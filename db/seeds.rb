@@ -18,5 +18,9 @@ CSV.foreach(Rails.root.join("db/seeds_data/scores.csv"), headers: true) do |row|
   Score.find_or_create_by(name: row[0], score: row[1])
 end
 
+CSV.foreach(Rails.root.join("db/seeds_data/products.csv"), headers: true) do |row|
+  Product.find_or_create_by(name: row[0], price: row[1])
+end
+
 
 

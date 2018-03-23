@@ -26,8 +26,10 @@
       <ul class="nav navbar-nav">
             <li><%= link_to "Home",   '/static_pages/home' %></li>
             <li><%= link_to "Games",   '/games' %></li>
-            <li><%= link_to "Scores", '#' %></li>
+            <li><%= link_to "Charts", '#' %></li>
             <li><%= link_to "Tweets", '/tweets' %></li>
+            <li><%= link_to "Buy Games", '/products' %></li>
+            
           </ul>
         </li>
       </ul>
@@ -40,6 +42,7 @@
         </div>
        
       <ul class="nav navbar-nav navbar-right">
+         <li class="active"><%= link_to "#{current_order.order_items.size} items and price £ #{current_order.subtotal}", carts_path %></li>
        <li><%= link_to "Sign in", '/users/sign_in' %></li>
         <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
         <li><%= link_to "Admin only", '/admins/sign_in' %></li>

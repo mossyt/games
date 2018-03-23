@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :admins
+    devise_for :admins
   devise_for :users
   get 'users/new'
 
@@ -10,5 +10,9 @@ Rails.application.routes.draw do
   resources :tweets do
   end
  resources :games, only: [:show, :index]
+ resources :products
+ resources :order_items
+ resource :carts, only: [:show]
+
 end
 

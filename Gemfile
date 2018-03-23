@@ -15,6 +15,8 @@ gem 'twitter'
 gem 'devise'
 gem 'bootstrap-sass', '3.3.7'
 gem 'activerecord-session_store'
+gem 'redis', '~> 3.0.1'
+gem 'hiredis', '~> 0.4.5'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
