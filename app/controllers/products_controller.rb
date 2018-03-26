@@ -1,5 +1,7 @@
 class ProductsController < ApplicationController
-    def index
+   before_action :authenticate_user!
+   
+   def index
     @products = Product.all
     @order_item = current_order.order_items.new
   end
@@ -9,7 +11,9 @@ class ProductsController < ApplicationController
     
   end
 
- private
+
+ 
+  private
     def product_params
       params.require(:product).permit(:name, :price)
     end

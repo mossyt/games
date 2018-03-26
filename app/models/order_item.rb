@@ -1,5 +1,5 @@
-class OrderItem < ActiveRecord::Base
-    belongs_to :order
+class OrderItem < ApplicationRecord
+	belongs_to :order
 	belongs_to :product
 
 	before_save :set_unit_price

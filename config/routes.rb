@@ -5,10 +5,8 @@ Rails.application.routes.draw do
 
   root 'static_pages#home'
   get 'static_pages/home'
-  get 'static_pages/about'
-  get 'static_pages/contact'
-  resources :tweets do
-  end
+  get 'static_pages/charts'
+  resources :tweets 
  resources :games, only: [:show, :index]
  resources :products
  resources :order_items

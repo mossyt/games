@@ -6,7 +6,6 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body> 
 <header class="navbar navbar-fixed-top">
            <nav class="navbar navbar-default">
   <div class="container-fluid">
@@ -26,7 +25,7 @@
       <ul class="nav navbar-nav">
             <li><%= link_to "Home",   '/static_pages/home' %></li>
             <li><%= link_to "Games",   '/games' %></li>
-            <li><%= link_to "Charts", '#' %></li>
+            <li><%= link_to "Charts", '/static_pages/charts' %></li>
             <li><%= link_to "Tweets", '/tweets' %></li>
             <li><%= link_to "Buy Games", '/products' %></li>
             
@@ -42,10 +41,11 @@
         </div>
        
       <ul class="nav navbar-nav navbar-right">
-         <li class="active"><%= link_to "#{current_order.order_items.size} items and price £ #{current_order.subtotal}", carts_path %></li>
-       <li><%= link_to "Sign in", '/users/sign_in' %></li>
-        <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+       <li class="active cart"><%= render 'layouts/cart' %></li>
+       <li><% if user_signed_in? %><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+        <li><% else %><%= link_to('login', new_user_session_path) %>
         <li><%= link_to "Admin only", '/admins/sign_in' %></li>
+        <% end %>
           </ul>
         </li>
       </ul>
@@ -53,9 +53,14 @@
   </div><!-- /.container-fluid -->
 </nav>
     </header>
+    <body>
     <div class="container">
-       <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+       <% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
       
 
 
