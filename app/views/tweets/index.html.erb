@@ -5,7 +5,7 @@
 
 
 
-<div id = 'tweetsdiv'>
+<div id = 'twetdiv'>
 		<% @tweets.each do |a| %>
 			<div class = 'panel panel-inverse'>
 			<div class = 'panel-body' style = 'height:100px; background-color:#3346FF'>
@@ -19,11 +19,11 @@
 	<script>
 
 		function loadlink(){
-		    $('#tweetsdiv').load(window.location.href + " #tweetsdiv");
+		    $('#twetdiv').load(window.location.href + " #twetdiv");
 		}
-	loadlink(); // This will run on page load
+	loadlink(); 
 	setInterval(function(){
-	    loadlink() // this will run after every 10 seconds
+	    loadlink() 
 	}, 7000);
 		
 	</script
