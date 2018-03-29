@@ -37,6 +37,15 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'pg', '0.18.1', group: :production
 gem 'rails_12factor', group: :production
 
+group :test do
+    gem 'turn', :require => false
+    gem 'factory_bot_rails'
+    gem 'capybara'
+    gem 'rspec-rails'
+    gem 'guard-rspec'
+    gem 'database_cleaner'
+  end
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
