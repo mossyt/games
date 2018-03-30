@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   get 'static_pages/home'
   get 'static_pages/charts'
+  get 'static_pages/purchased'
+  
   resources :tweets 
  resources :games, only: [:show, :index]
  resources :products

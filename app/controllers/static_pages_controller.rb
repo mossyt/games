@@ -3,5 +3,8 @@ class StaticPagesController < ApplicationController
   end
 
   def charts
-  end  
+  end
+  
+  def purchased
+  end
 end

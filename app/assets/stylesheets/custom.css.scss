@@ -5,6 +5,10 @@
 
 body {
   padding-top: 50px;
+   background: url('https://www.hdwallpapers.in/walls/mega_mario-HD.jpg');
+   background-position: fixed
+   
+  
 }
 
 section {
@@ -20,9 +24,8 @@ textarea {
 }
 
 .center h1 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
-
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -32,14 +35,14 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 3em;
   letter-spacing: -2px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   text-align: center;
 }
 
 h2 {
   font-size: 1.2em;
   letter-spacing: -1px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
   color: #777;
@@ -50,7 +53,6 @@ p {
   line-height: 1.7em;
 }
 
-
 /* header */
 
 #logo {
@@ -60,66 +62,55 @@ p {
   color: #fff;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 8px;
+  padding-top: 9px;
   font-weight: bold;
 }
 
 #logo:hover {
-  color: #00FFFF;
+  color: #0000FF;
   text-decoration: none;
 }
 
-/* 
-Max width before this PARTICULAR table gets nasty
-This query will take effect for any screen smaller than 760px
-and also iPads specifically.
-*/
-@media 
-only screen and (max-width: 760px),
-(min-device-width: 768px) and (max-device-width: 1024px)  {
-
-	/* Force table to not be like tables anymore */
-	table, thead, tbody, th, td, tr { 
-		display: block; 
-	}
-	
-	/* Hide table headers (but not display: none;, for accessibility) */
-	thead tr { 
-		position: absolute;
-		top: -9999px;
-		left: -9999px;
-	}
-	
-	tr { border: 1px solid #ccc; }
-	
-	td { 
-		/* Behave  like a "row" */
-		border: none;
-		border-bottom: 1px solid #eee; 
-		position: relative;
-		padding-left: 50%; 
-	}
-	
-	td:before { 
-		/* Now like a table header */
-		position: absolute;
-		/* Top/left values mimic padding */
-		top: 6px;
-		left: 6px;
-		width: 45%; 
-		padding-right: 10px; 
-		white-space: nowrap;
-	}
-	
-	/*
-	Label the data
-	*/
-	td:nth-of-type(1):before { content: "Name"; }
-	td:nth-of-type(2):before { content: "Platform"; }
-	td:nth-of-type(3):before { content: "Score Phase"; }
-	td:nth-of-type(4):before { content: "Score"; }
-	td:nth-of-type(5):before { content: "Genre"; }
-	td:nth-of-type(6):before { content: "Release Year"; }
-	td:nth-of-type(7):before { content: "Release Month"; }
-	td:nth-of-type(8):before { content: "Release Day"; }
+.pagination {
+  background: white;
+  cursor: default;
+  height: 22px;
+  a, span, em {
+    padding: 0.2em 0.5em;
+    display: block;
+    float: left;
+    margin-right: 1px;
+  }
+  .disabled {
+    display: none;
+  }
+  .current {
+    font-style: normal;
+    font-weight: bold;
+    background: #2e6ab1;
+    color: white;
+    border: 1px solid #2e6ab1;
+  }
+  a {
+    text-decoration: none;
+    color: #105cb6;
+    border: 1px solid #9aafe5;
+    &:hover, &:focus {
+      color: #000033;
+      border-color: #000033;
+    }
+  }
+  .page_info {
+    background: #2e6ab1;
+    color: white;
+    padding: 0.4em 0.6em;
+    width: 22em;
+    margin-bottom: 0.3em;
+    text-align: center;
+    b {
+      color: #000033;
+      background: #2e6ab1 + 60;
+      padding: 0.1em 0.25em;
+    }
+  }
 }
