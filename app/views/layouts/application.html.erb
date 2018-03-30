@@ -23,8 +23,8 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-            <li><%= link_to "Home",   '/static_pages/home' %></li>
-            <li><%= link_to "Games",   '/games' %></li>
+            <li><%= link_to "Home",  '/static_pages/home' %></li>
+            <li><%= link_to "Games",  '/games' %></li>
             <li><%= link_to "Charts", '/static_pages/charts' %></li>
             <li><%= link_to "Tweets", '/tweets' %></li>
             <li><%= link_to "Buy Games", '/products' %></li>
@@ -44,7 +44,7 @@
        <li class="active cart"><%= render 'layouts/cart' %></li>
        <li><% if user_signed_in? %><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
         <li><% else %><%= link_to('login', new_user_session_path) %>
-        <li><%= link_to "Admin only", '/admins/sign_in' %></li>
+        <li><%= link_to "Admin", '/admins/sign_in' %></li>
         <% end %>
           </ul>
         </li>
